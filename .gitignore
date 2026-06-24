@@ -1,0 +1,18 @@
+# Python Virtual Environment
+venv/
+
+# Database Files (We regenerate these, we don't store them)
+*.duckdb
+*.duckdb.wal
+
+# DBT Build Artifacts (Compiled code, do not commit)
+target/
+dbt_packages/
+logs/
+
+# DBT Local Profiles (Contains your local C: drive paths)
+.dbt/
+
+# OS Junk
+.DS_Store
+Thumbs.db

@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: stg_api_events
+    description: "Cleaned and standardized B2B API telemetry events."
+    columns:
+      - name: event_id
+        description: "Unique identifier for each API request."
+        tests:
+          - unique
+          - not_null
+      - name: request_timestamp
+        description: "The exact time the API request was received."
+        tests:
+          - not_null
+      - name: client_id
+        description: "The identifier for the B2B client making the request."
+        tests:
+          - not_null
+      - name: endpoint
+        description: "The API path requested, normalized to lowercase."
+        tests:
+          - not_null
